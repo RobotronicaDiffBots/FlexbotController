@@ -4,7 +4,7 @@
 #define robotID 14 //direct control robot ID 250 for all bots
 
 #define SPEED_SCALE 0.3  // 0.0 to 1.0
-#define SERVO_SCALE 0.5 // 0.0 to 1.0
+#define SERVO_SCALE 1.0 // 0.0 to 1.0
 
 #define RIGHT_V   0
 #define RIGHT_H   1
