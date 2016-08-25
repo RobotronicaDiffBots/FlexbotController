@@ -4,6 +4,7 @@
 #define robotID 14 //direct control robot ID 250 for all bots
 
 #define SPEED_SCALE 0.3  // 0.0 to 1.0
+#define SERVO_SCALE 0.5 // 0.0 to 1.0
 
 #define RIGHT_V   0
 #define RIGHT_H   1
@@ -230,10 +231,11 @@ void loop(){
     } else {
       type = TASK_SERVO;
       // sticks value is between 0 and 200 with 100 as mid point (zero)
-      int d = (100-sticks[RIGHT_H])*0.9;
-      int v = (100-sticks[RIGHT_V])*0.9;
+      int d = (100-sticks[RIGHT_H])*0.9*SERVO_SCALE;
+      int v = (100-sticks[RIGHT_V])*0.9*SERVO_SCALE;
       one = 90+d;
       two = 90+v;
+      three = two;
       state = 0;
     }
     
@@ -278,5 +280,3 @@ void loop(){
  *  V1.0 - Feb 10, 2010 - Firmware Finalized
  */
  
-
-
